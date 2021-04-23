@@ -1,0 +1,83 @@
+// Tile styles used along with https://github.com/discourse/discourse-topic-thumbnails
+
+// temp
+
+body {
+  background: var(--primary-very-low);
+}
+
+.topic-thumbnails-grid {
+  margin-top: 1.5em;
+
+  tbody {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2.5em 2em;
+
+    tr {
+      grid-template-columns: auto;
+      grid-template-rows: 280px auto 1fr;
+      height: unset;
+      border-radius: 6px;
+      border: none;
+      background: var(--secondary);
+    }
+
+    .topic-thumbnails-grid .topic-list-thumbnail .main-thumbnail {
+      object-fit: cover; // fill the entire image container
+    }
+
+    .thumbnail-placeholder {
+      svg {
+        display: none; // this hides the placeholder icon set in the topic thumbnails component
+      }
+      background-image: url(#{$placeholder_image_url});
+      background-size: cover;
+    }
+
+    .main-link {
+      background: var(--secondary);
+      padding: 2em 1.5em 2.5em;
+      justify-content: flex-start;
+    }
+
+    .badge-wrapper,
+    td.posters,
+    td.num.age {
+      // hide category, posters, and latest activity time
+      display: none !important;
+    }
+
+    .topic-excerpt {
+      display: block;
+      margin-top: 1em;
+      font-size: $font-down-2;
+      color: var(--primary-medium);
+      width: auto;
+    }
+
+    .link-top-line {
+      font-size: $font-up-2;
+      font-weight: bold;
+      align-self: start;
+    }
+
+    .link-bottom-line {
+      order: -1; // put the tags above the title
+      margin-bottom: 1em;
+      align-self: start;
+      .desktop-view & {
+        // reserves space to keep everything aligned even if a topic has no tags
+        // but only on desktop, because mobile is a single column
+        min-height: 1.5em;
+      }
+      a {
+        text-transform: uppercase;
+        font-size: $font-0;
+      }
+    }
+
+    .topic-list-thumbnail {
+      height: 280px;
+    }
+  }
+}

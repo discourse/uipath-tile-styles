@@ -1,0 +1,3 @@
+placeholder_image_url:
+  type: upload
+  default: "placeholder"
