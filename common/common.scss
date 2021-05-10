@@ -62,6 +62,11 @@ body {
         order: -1; // put the tags above the title
         margin-bottom: 1em;
         align-self: start;
+        .discourse-tags {
+          .discourse-tag {
+            margin-bottom: 0.33em;
+          }
+        }
         .desktop-view & {
           // reserves space to keep everything aligned even if a topic has no tags
           // but only on desktop, because mobile is a single column
