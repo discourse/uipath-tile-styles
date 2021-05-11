@@ -82,5 +82,10 @@ body {
         height: 280px;
       }
     }
+
+    // hide hover excerpts
+    .d-tooltip {
+      display: none !important;
+    }
   }
 }
