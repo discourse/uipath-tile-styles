@@ -103,3 +103,9 @@ body {
     }
   }
 }
+
+.desktop-view body .topic-thumbnails-grid.topic-list tbody .link-bottom-line {
+  min-height: unset;
+  margin: 0;
+  padding-bottom: 1em;
+}
