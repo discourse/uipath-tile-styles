@@ -16,13 +16,13 @@ body {
         height: unset;
         border-radius: 6px;
         border: none;
-        background: #fff;
+        background: var(--card-bg);
         grid-template-areas: " image image " " title title" " posters posters";
 
         td.posters {
           grid-column-start: 1;
           padding: 1em 1.7em;
-          background: #fff;
+          background: var(--card-bg);
           justify-content: flex-start;
           a::after {
             content: " " attr(data-user-card);
@@ -47,7 +47,7 @@ body {
       }
 
       .main-link {
-        background: #fff;
+        background: var(--card-bg);
         padding: 2em 1.5em 1em;
         justify-content: flex-start;
       }
