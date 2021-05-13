@@ -1,4 +1,4 @@
-$card-bg: dark-light-choose(black, white);
+$card-bg: dark-light-choose(white, black);
 
 :root {
   --card-bg: #{$card-bg};
