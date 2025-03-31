@@ -1,7 +1,6 @@
 // Tile styles used along with https://github.com/discourse/discourse-topic-thumbnails
 
 // body tag is for extra specificity to avoid race condition
-
 body {
   .topic-thumbnails-grid.topic-list {
     margin-top: 1.5em;
@@ -24,10 +23,12 @@ body {
           padding: 1em 1.7em;
           background: var(--card-bg);
           justify-content: flex-start;
+
           a::after {
             content: " " attr(data-user-card);
             margin-left: 0.25em;
           }
+
           a.latest {
             width: auto !important;
           }
@@ -76,16 +77,19 @@ body {
         order: -1; // put the tags above the title
         margin-bottom: 1em;
         align-self: start;
+
         .discourse-tags {
           .discourse-tag {
             margin-bottom: 0.33em;
           }
         }
+
         .desktop-view & {
-          // reserves space to keep everything aligned even if a topic has no tags
-          // but only on desktop, because mobile is a single column
-          min-height: 1.5em;
+          min-height: unset;
+          margin: 0;
+          padding-bottom: 1em;
         }
+
         a {
           text-transform: uppercase;
           font-size: $font-0;
@@ -102,10 +106,4 @@ body {
       display: none !important;
     }
   }
-}
-
-.desktop-view body .topic-thumbnails-grid.topic-list tbody .link-bottom-line {
-  min-height: unset;
-  margin: 0;
-  padding-bottom: 1em;
 }
